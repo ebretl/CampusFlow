@@ -1,5 +1,4 @@
 
-const int trackingSeconds = 30;
 short soundArray [3200];
 const int measuresPerSec = sizeof(soundArray) / sizeof(soundArray[0]);
 
@@ -73,22 +72,24 @@ int getSoundDeviation(int avg) {
 
 long sumOfAvgs = 0;
 int avgIndex = 0;
-int rollingAvgs [10];
-float soundRollingAvg(int newVal) { return updateRollingAvg(rollingAvgs,&sumOfAvgs,&avgIndex,newVal); }
+int rollingAvgs [30];
+float soundRollingAvg(int newVal) { 
+  Serial.println(avgIndex);
+  return updateRollingAvg(rollingAvgs,&sumOfAvgs,&avgIndex,newVal); }
 
 long sumOfAvgsSqr = 0;
 int avgSqrIndex = 0;
-int rollingAvgsSqr [10];
+int rollingAvgsSqr [30];
 float soundRollingAvgSqr(int newVal) { return updateRollingAvg(rollingAvgsSqr,&sumOfAvgsSqr,&avgSqrIndex,newVal); }
 
 long sumOfPeakAvgs= 0;
 int peakAvgIndex = 0;
-int rollingPeakAvgs [10];
+int rollingPeakAvgs [30];
 float soundRollingPeakAvg(int newVal) { return updateRollingAvg(rollingPeakAvgs,&sumOfPeakAvgs,&peakAvgIndex,newVal); }
 
 long sumOfDevs = 0;
 int devIndex = 0;
-int rollingDevs [10];
+int rollingDevs [30];
 float soundRollingDeviation(int newVal) { return updateRollingAvg(rollingDevs,&sumOfDevs,&devIndex,newVal); }
 
 float updateRollingAvg(int arr[], long *total, int *updateIndex, int newVal) {
@@ -96,9 +97,8 @@ float updateRollingAvg(int arr[], long *total, int *updateIndex, int newVal) {
   *total += newVal;
   arr[*updateIndex] = newVal;
 
-  int len = sizeof(arr) / sizeof(arr[0]);
-  *updateIndex = (*updateIndex + 1) % len;
-  return (float) *total / len;
+  *updateIndex = (*updateIndex + 1) % 30;
+  return (float) *total / 30;
 }
 
 
