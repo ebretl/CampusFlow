@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D472B7E1D96D846008B0ABA /* BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D472B7D1D96D846008B0ABA /* BLEManager.m */; };
+		0D472B831D96DAE9008B0ABA /* FlowBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D472B821D96DAE9008B0ABA /* FlowBoxController.m */; };
+		0DA5E9D51D96C73D00729692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9D41D96C73D00729692 /* main.m */; };
+		0DA5E9D81D96C73D00729692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9D71D96C73D00729692 /* AppDelegate.m */; };
+		0DA5E9DB1D96C73D00729692 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DA1D96C73D00729692 /* FirstViewController.m */; };
+		0DA5E9DE1D96C73D00729692 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DD1D96C73D00729692 /* SecondViewController.m */; };
+		0DA5E9E11D96C73D00729692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DF1D96C73D00729692 /* Main.storyboard */; };
+		0DA5E9E31D96C73D00729692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5E9E21D96C73D00729692 /* Assets.xcassets */; };
+		0DA5E9E61D96C73D00729692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5E9E41D96C73D00729692 /* LaunchScreen.storyboard */; };
+		0DA5E9F11D96C73D00729692 /* CampusFlowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9F01D96C73D00729692 /* CampusFlowTests.m */; };
+		0DA5E9FC1D96C73D00729692 /* CampusFlowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9FB1D96C73D00729692 /* CampusFlowUITests.m */; };
+		0DA5EA0A1D96C7ED00729692 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA5EA091D96C7ED00729692 /* CoreBluetooth.framework */; };
+		0DA5EA0E1D96CB7000729692 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5EA0D1D96CB7000729692 /* WelcomeViewController.m */; };
+		A3A8318433993CEC7F612CB9 /* Pods_CampusFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE703D5BF2F749A463B086C3 /* Pods_CampusFlow.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DA5E9ED1D96C73D00729692 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DA5E9C81D96C73D00729692 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DA5E9CF1D96C73D00729692;
+			remoteInfo = CampusFlow;
+		};
+		0DA5E9F81D96C73D00729692 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DA5E9C81D96C73D00729692 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DA5E9CF1D96C73D00729692;
+			remoteInfo = CampusFlow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0160B3BB5FC1890E49C83479 /* Pods-CampusFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusFlow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusFlow/Pods-CampusFlow.debug.xcconfig"; sourceTree = "<group>"; };
+		0D472B7C1D96D846008B0ABA /* BLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEManager.h; sourceTree = "<group>"; };
+		0D472B7D1D96D846008B0ABA /* BLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEManager.m; sourceTree = "<group>"; };
+		0D472B811D96DAE9008B0ABA /* FlowBoxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowBoxController.h; sourceTree = "<group>"; };
+		0D472B821D96DAE9008B0ABA /* FlowBoxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowBoxController.m; sourceTree = "<group>"; };
+		0D472B841D96E82C008B0ABA /* BTStateListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTStateListener.h; sourceTree = "<group>"; };
+		0DA5E9D01D96C73D00729692 /* CampusFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DA5E9D41D96C73D00729692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DA5E9D61D96C73D00729692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0DA5E9D71D96C73D00729692 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0DA5E9D91D96C73D00729692 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		0DA5E9DA1D96C73D00729692 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		0DA5E9DC1D96C73D00729692 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		0DA5E9DD1D96C73D00729692 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		0DA5E9E01D96C73D00729692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0DA5E9E21D96C73D00729692 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DA5E9E51D96C73D00729692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0DA5E9E71D96C73D00729692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA5E9EC1D96C73D00729692 /* CampusFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DA5E9F01D96C73D00729692 /* CampusFlowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampusFlowTests.m; sourceTree = "<group>"; };
+		0DA5E9F21D96C73D00729692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA5E9F71D96C73D00729692 /* CampusFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DA5E9FB1D96C73D00729692 /* CampusFlowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampusFlowUITests.m; sourceTree = "<group>"; };
+		0DA5E9FD1D96C73D00729692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA5EA091D96C7ED00729692 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		0DA5EA0C1D96CB7000729692 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		0DA5EA0D1D96CB7000729692 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		E454FFF7D7EB0FAB31D49CCF /* Pods-CampusFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusFlow.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusFlow/Pods-CampusFlow.release.xcconfig"; sourceTree = "<group>"; };
+		EE703D5BF2F749A463B086C3 /* Pods_CampusFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DA5E9CD1D96C73D00729692 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5EA0A1D96C7ED00729692 /* CoreBluetooth.framework in Frameworks */,
+				A3A8318433993CEC7F612CB9 /* Pods_CampusFlow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DA5E9E91D96C73D00729692 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DA5E9F41D96C73D00729692 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DA5E9C71D96C73D00729692 = {
+			isa = PBXGroup;
+			children = (
+				0DA5EA091D96C7ED00729692 /* CoreBluetooth.framework */,
+				0DA5E9D21D96C73D00729692 /* CampusFlow */,
+				0DA5E9EF1D96C73D00729692 /* CampusFlowTests */,
+				0DA5E9FA1D96C73D00729692 /* CampusFlowUITests */,
+				0DA5E9D11D96C73D00729692 /* Products */,
+				23BFB90F83B14E13130C2B6D /* Pods */,
+				E4BF8A95EA877E6261062A93 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0DA5E9D11D96C73D00729692 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5E9D01D96C73D00729692 /* CampusFlow.app */,
+				0DA5E9EC1D96C73D00729692 /* CampusFlowTests.xctest */,
+				0DA5E9F71D96C73D00729692 /* CampusFlowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DA5E9D21D96C73D00729692 /* CampusFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5EA0B1D96CAD300729692 /* UI */,
+				0DA5E9D61D96C73D00729692 /* AppDelegate.h */,
+				0DA5E9D71D96C73D00729692 /* AppDelegate.m */,
+				0D472B7C1D96D846008B0ABA /* BLEManager.h */,
+				0D472B7D1D96D846008B0ABA /* BLEManager.m */,
+				0DA5E9DF1D96C73D00729692 /* Main.storyboard */,
+				0DA5E9E21D96C73D00729692 /* Assets.xcassets */,
+				0DA5E9E41D96C73D00729692 /* LaunchScreen.storyboard */,
+				0DA5E9E71D96C73D00729692 /* Info.plist */,
+				0DA5E9D31D96C73D00729692 /* Supporting Files */,
+				0D472B811D96DAE9008B0ABA /* FlowBoxController.h */,
+				0D472B821D96DAE9008B0ABA /* FlowBoxController.m */,
+				0D472B841D96E82C008B0ABA /* BTStateListener.h */,
+			);
+			path = CampusFlow;
+			sourceTree = "<group>";
+		};
+		0DA5E9D31D96C73D00729692 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5E9D41D96C73D00729692 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DA5E9EF1D96C73D00729692 /* CampusFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5E9F01D96C73D00729692 /* CampusFlowTests.m */,
+				0DA5E9F21D96C73D00729692 /* Info.plist */,
+			);
+			path = CampusFlowTests;
+			sourceTree = "<group>";
+		};
+		0DA5E9FA1D96C73D00729692 /* CampusFlowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5E9FB1D96C73D00729692 /* CampusFlowUITests.m */,
+				0DA5E9FD1D96C73D00729692 /* Info.plist */,
+			);
+			path = CampusFlowUITests;
+			sourceTree = "<group>";
+		};
+		0DA5EA0B1D96CAD300729692 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5E9D91D96C73D00729692 /* FirstViewController.h */,
+				0DA5E9DA1D96C73D00729692 /* FirstViewController.m */,
+				0DA5E9DC1D96C73D00729692 /* SecondViewController.h */,
+				0DA5E9DD1D96C73D00729692 /* SecondViewController.m */,
+				0DA5EA0C1D96CB7000729692 /* WelcomeViewController.h */,
+				0DA5EA0D1D96CB7000729692 /* WelcomeViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		23BFB90F83B14E13130C2B6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0160B3BB5FC1890E49C83479 /* Pods-CampusFlow.debug.xcconfig */,
+				E454FFF7D7EB0FAB31D49CCF /* Pods-CampusFlow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E4BF8A95EA877E6261062A93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE703D5BF2F749A463B086C3 /* Pods_CampusFlow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DA5E9CF1D96C73D00729692 /* CampusFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DA5EA001D96C73D00729692 /* Build configuration list for PBXNativeTarget "CampusFlow" */;
+			buildPhases = (
+				9E4259AB6FBC38C1B808CE74 /* [CP] Check Pods Manifest.lock */,
+				0DA5E9CC1D96C73D00729692 /* Sources */,
+				0DA5E9CD1D96C73D00729692 /* Frameworks */,
+				0DA5E9CE1D96C73D00729692 /* Resources */,
+				4F1BF5EADD7DE7C91953E336 /* [CP] Embed Pods Frameworks */,
+				6C19F4F4CF15A55A269DCF09 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CampusFlow;
+			productName = CampusFlow;
+			productReference = 0DA5E9D01D96C73D00729692 /* CampusFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0DA5E9EB1D96C73D00729692 /* CampusFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DA5EA031D96C73D00729692 /* Build configuration list for PBXNativeTarget "CampusFlowTests" */;
+			buildPhases = (
+				0DA5E9E81D96C73D00729692 /* Sources */,
+				0DA5E9E91D96C73D00729692 /* Frameworks */,
+				0DA5E9EA1D96C73D00729692 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DA5E9EE1D96C73D00729692 /* PBXTargetDependency */,
+			);
+			name = CampusFlowTests;
+			productName = CampusFlowTests;
+			productReference = 0DA5E9EC1D96C73D00729692 /* CampusFlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0DA5E9F61D96C73D00729692 /* CampusFlowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DA5EA061D96C73D00729692 /* Build configuration list for PBXNativeTarget "CampusFlowUITests" */;
+			buildPhases = (
+				0DA5E9F31D96C73D00729692 /* Sources */,
+				0DA5E9F41D96C73D00729692 /* Frameworks */,
+				0DA5E9F51D96C73D00729692 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DA5E9F91D96C73D00729692 /* PBXTargetDependency */,
+			);
+			name = CampusFlowUITests;
+			productName = CampusFlowUITests;
+			productReference = 0DA5E9F71D96C73D00729692 /* CampusFlowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DA5E9C81D96C73D00729692 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = HackGT;
+				TargetAttributes = {
+					0DA5E9CF1D96C73D00729692 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0DA5E9EB1D96C73D00729692 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0DA5E9CF1D96C73D00729692;
+					};
+					0DA5E9F61D96C73D00729692 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0DA5E9CF1D96C73D00729692;
+					};
+				};
+			};
+			buildConfigurationList = 0DA5E9CB1D96C73D00729692 /* Build configuration list for PBXProject "CampusFlow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0DA5E9C71D96C73D00729692;
+			productRefGroup = 0DA5E9D11D96C73D00729692 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DA5E9CF1D96C73D00729692 /* CampusFlow */,
+				0DA5E9EB1D96C73D00729692 /* CampusFlowTests */,
+				0DA5E9F61D96C73D00729692 /* CampusFlowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DA5E9CE1D96C73D00729692 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5E9E61D96C73D00729692 /* LaunchScreen.storyboard in Resources */,
+				0DA5E9E31D96C73D00729692 /* Assets.xcassets in Resources */,
+				0DA5E9E11D96C73D00729692 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DA5E9EA1D96C73D00729692 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DA5E9F51D96C73D00729692 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F1BF5EADD7DE7C91953E336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampusFlow/Pods-CampusFlow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C19F4F4CF15A55A269DCF09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampusFlow/Pods-CampusFlow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E4259AB6FBC38C1B808CE74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DA5E9CC1D96C73D00729692 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5EA0E1D96CB7000729692 /* WelcomeViewController.m in Sources */,
+				0DA5E9DE1D96C73D00729692 /* SecondViewController.m in Sources */,
+				0DA5E9D81D96C73D00729692 /* AppDelegate.m in Sources */,
+				0D472B831D96DAE9008B0ABA /* FlowBoxController.m in Sources */,
+				0DA5E9DB1D96C73D00729692 /* FirstViewController.m in Sources */,
+				0DA5E9D51D96C73D00729692 /* main.m in Sources */,
+				0D472B7E1D96D846008B0ABA /* BLEManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DA5E9E81D96C73D00729692 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5E9F11D96C73D00729692 /* CampusFlowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DA5E9F31D96C73D00729692 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5E9FC1D96C73D00729692 /* CampusFlowUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DA5E9EE1D96C73D00729692 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DA5E9CF1D96C73D00729692 /* CampusFlow */;
+			targetProxy = 0DA5E9ED1D96C73D00729692 /* PBXContainerItemProxy */;
+		};
+		0DA5E9F91D96C73D00729692 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DA5E9CF1D96C73D00729692 /* CampusFlow */;
+			targetProxy = 0DA5E9F81D96C73D00729692 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0DA5E9DF1D96C73D00729692 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DA5E9E01D96C73D00729692 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0DA5E9E41D96C73D00729692 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DA5E9E51D96C73D00729692 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0DA5E9FE1D96C73D00729692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0DA5E9FF1D96C73D00729692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0DA5EA011D96C73D00729692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0160B3BB5FC1890E49C83479 /* Pods-CampusFlow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CampusFlow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0DA5EA021D96C73D00729692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E454FFF7D7EB0FAB31D49CCF /* Pods-CampusFlow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CampusFlow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0DA5EA041D96C73D00729692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CampusFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusFlow.app/CampusFlow";
+			};
+			name = Debug;
+		};
+		0DA5EA051D96C73D00729692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CampusFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusFlow.app/CampusFlow";
+			};
+			name = Release;
+		};
+		0DA5EA071D96C73D00729692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CampusFlowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CampusFlow;
+			};
+			name = Debug;
+		};
+		0DA5EA081D96C73D00729692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CampusFlowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CampusFlow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DA5E9CB1D96C73D00729692 /* Build configuration list for PBXProject "CampusFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DA5E9FE1D96C73D00729692 /* Debug */,
+				0DA5E9FF1D96C73D00729692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DA5EA001D96C73D00729692 /* Build configuration list for PBXNativeTarget "CampusFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DA5EA011D96C73D00729692 /* Debug */,
+				0DA5EA021D96C73D00729692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DA5EA031D96C73D00729692 /* Build configuration list for PBXNativeTarget "CampusFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DA5EA041D96C73D00729692 /* Debug */,
+				0DA5EA051D96C73D00729692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DA5EA061D96C73D00729692 /* Build configuration list for PBXNativeTarget "CampusFlowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DA5EA071D96C73D00729692 /* Debug */,
+				0DA5EA081D96C73D00729692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0DA5E9C81D96C73D00729692 /* Project object */;
+}

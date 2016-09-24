@@ -23,6 +23,10 @@ int getSoundAvg() {
   }
   return sum >> measuresPerSecPower;
 }
+unsigned long soundCurrTotal;
+int soundCurrIndex;
+int soundCurrArray [512];
+
 
 int getSoundPeakAvg() {
   long sum = 0;
@@ -51,6 +55,28 @@ int getSoundDeviation(int avg) {
     sum += n*n;
   }
   return sqrt(sum >> measuresPerSecPower);
+}
+
+
+
+
+
+long sumOfAvgs;
+int avgIndex;
+int rollingAvgs [10];
+
+long sumOfAvgsSqr;
+int avgSqrIndex;
+int rollingAvgsSqr [10];
+
+float updateRollingAvg(int arr[], long *total, int *updateIndex, int newVal) {
+  arr[updateIndex] = newVal;
+  *total -= arr[*updateIndex];
+  *total += newVal;
+
+  len = sizeof(arr) / sizeof(arr[0]);
+  *updateIndex = (*updateIndex + 1) & (len-1);
+  return (float) *total / len;
 }
 
 
