@@ -1,0 +1,12 @@
+PODS:
+  - DCAnimationKit (0.0.6)
+
+DEPENDENCIES:
+  - DCAnimationKit
+
+SPEC CHECKSUMS:
+  DCAnimationKit: 7133bef877ce1aa113dcfeea1380ca67f91f7608
+
+PODFILE CHECKSUM: 9a8ed191576ae856b796aef1685be474f979f5b5
+
+COCOAPODS: 1.0.1
