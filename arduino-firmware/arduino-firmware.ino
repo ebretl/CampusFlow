@@ -28,6 +28,10 @@ void setup() {
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
   lcd.setRGB(colorR, colorG, colorB);
+
+  //BLE
+  setupBLE();
+  beginBLEBroadcast();
 }
 
 void loop() {
@@ -41,6 +45,10 @@ void loop() {
   lcd.setCursor(0, 1);
   lcd.print("Sound: ");
   lcd.println(sound_level(pinSound));
+  
+
+  //BLE
+  tickBLE();
   
   delay(100);
 }
