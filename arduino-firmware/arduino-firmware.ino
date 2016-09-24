@@ -42,7 +42,11 @@ void loop() {
   lcd.setCursor(0, 1);
   lcd.print("Deviation: ");
   lcd.print(soundDeviation);
-  
+
+  recordSoundSecond();
+  Serial.print(getSoundAvg());
+  Serial.print(' ');
+  Serial.println(getSoundPeakAvg());
 
   //BLE
   tickBLE();
