@@ -3,31 +3,44 @@ int raw_loudest = 500; //lower is more sensitive, <=1023
 
 float sound_level(int pin) {
   long sum = 0;
-  for(int i=0; i<64; i++) {
-      sum += analogRead(pin);
+  for (int i = 0; i < 64; i++) {
+    sum += analogRead(pin);
   }
 
   int raw = sum >> 6;
   return (1023.0 - raw) / raw_loudest;
-} 
+}
 
-int average;
 
 unsigned long soundTotal;
 int soundIndex;
-int [64] soundArray;
+int soundArray [512];
 
 void updateSound () {
-  int newVal = analogRead(pin);
+  int newVal = analogRead(SOUND_PIN) * analogRead(SOUND_PIN);
   updateAverage(newVal);
-  
+  updateDeviation(newVal);
 }
 
 void updateAverage(int newVal) {
-   soundTotal += newVal;
+  soundTotal += newVal;
   soundTotal -= soundArray[soundIndex];
   soundArray[soundIndex] = newVal;
-  
-  soundIndex = (soundIndex + 1) & 63;
-  average = soundTotal >> 6;
- }
+
+  soundIndex = (soundIndex + 1) & 511;
+  soundAverage = soundTotal >> 9;
+}
+
+unsigned long soundDevTotal;
+int soundDevIndex;
+int soundDevArray [512];
+
+void updateDeviation(int newVal) {
+  newVal = (newVal - soundAverage) * (newVal - soundAverage);
+  soundDevTotal += newVal;
+  soundDevTotal -= soundDevArray[soundDevIndex];
+  soundDevArray[soundDevIndex] = newVal;
+
+  soundDevIndex = (soundDevIndex + 1) & 511;
+  soundDeviation = sqrt((soundDevTotal >> 9));
+}
