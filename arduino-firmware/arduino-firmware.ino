@@ -7,7 +7,8 @@ rgb_lcd lcd;
 const int SOUND_PIN = A0;
 const int TEMP_PIN = A2;
 
-unsigned long millisTimer;
+int soundAvg, soundAvgSqr, soundPeakAvg, soundDeviation;
+int rollingSoundAvg, rollingSoundAvgSqr, rollingSoundPeakAvg, rollingSoundDeviation;
 
 //user preferences currently resets for each session
 float tempIdeal = 72;
@@ -34,15 +35,15 @@ void setup() {
 void loop() {
   updateSensors();
 
-  //lcd.print("Average: ");
-  //lcd.print(soundCurrAverage);
-  //lcd.print("       ");
+  lcd.setCursor(0, 0);
+  lcd.print("Average: ");
+  lcd.print(rollingSoundAvg);
+  lcd.print("       ");
 
-  //lcd.setCursor(0, 1);
-  //lcd.print(soundAverage);
-  //lcd.print("       ");
-  //lcd.setCursor(8, 1);  
-  //lcd.print(soundDeviation);
+  lcd.setCursor(0, 1);
+  lcd.print("Deviation: ");
+  lcd.print(rollingSoundDeviation);
+  lcd.print("       ");
 
   int avg = getSoundAvg();
   Serial.print(avg);
