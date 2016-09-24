@@ -54,6 +54,6 @@ void loop() {
   //BLE
   tickBLE();
   
-  delay(50);
+  delay(10);
 }
 

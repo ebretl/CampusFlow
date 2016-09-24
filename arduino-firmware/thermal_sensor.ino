@@ -1,11 +1,12 @@
+int averageTemperature;
 
 float temperature() {
   return averageTemperature;
 }
 
 void updateTemperature () {
-  int newVal = getRawTemperature();
-  updateAverage(newVal);
+  int newVal = getRawTemperature(TEMP_PIN);
+  updateTempAverage(newVal);
 }
 
 
@@ -24,12 +25,11 @@ float getRawTemperature(int pinTempSensor) {
   return temperature;
 }
 
-int averageTemperature;
 unsigned long thermTotal;
 int thermIndex;
-int [64] thermArray;
+int thermArray [64] ;
 
-void updateAverage(int newVal) {
+void updateTempAverage(int newVal) {
   thermTotal += newVal;
   thermTotal -= thermArray[thermIndex];
   thermArray[thermIndex] = newVal;

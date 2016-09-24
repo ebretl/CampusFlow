@@ -18,11 +18,11 @@ int soundArray [512];
 
 void updateSound () {
   int newVal = analogRead(SOUND_PIN) * analogRead(SOUND_PIN);
-  updateAverage(newVal);
-  updateDeviation(newVal);
+  updateSoundAverage(newVal);
+  updateSoundDeviation(newVal);
 }
 
-void updateAverage(int newVal) {
+void updateSoundAverage(int newVal) {
   soundTotal += newVal;
   soundTotal -= soundArray[soundIndex];
   soundArray[soundIndex] = newVal;
@@ -35,7 +35,7 @@ unsigned long soundDevTotal;
 int soundDevIndex;
 int soundDevArray [512];
 
-void updateDeviation(int newVal) {
+void updateSoundDeviation(int newVal) {
   newVal = (newVal - soundAverage) * (newVal - soundAverage);
   soundDevTotal += newVal;
   soundDevTotal -= soundDevArray[soundDevIndex];
