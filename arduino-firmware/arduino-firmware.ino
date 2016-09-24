@@ -28,6 +28,10 @@ void setup() {
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
   lcd.setRGB(colorR, colorG, colorB);
+
+  //BLE
+  setupBLE();
+  beginBLEBroadcast();
 }
 
 void loop() {
@@ -37,6 +41,10 @@ void loop() {
   // print the number of seconds since reset:
   lcd.print("Temp: ");
   lcd.println(temperature(pinTherm));
+
+  //BLE
+  tickBLE();
+  
   delay(100);
 }
 

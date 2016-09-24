@@ -21,8 +21,8 @@ BLEIntCharacteristic soundChar("180C", BLERead | BLENotify);
 bool connected = false;
 bool update = false;
 int temp = -1;
-int light = -1;
-int sound = -1;
+int light = -2;
+int sound = -3;
 
 //Sets the current temp value being broadcast (1-10)
 void setTemp(int t) {
@@ -48,9 +48,9 @@ bool isConnected() {
 }
 
 //Should be run on every tick of the Arduino in order to broadcast changed data to the peripheral
-void tick() {
-  BLECentralHelper central = peripheral.central();
-  if (central) {
+void tickBLE() {
+  BLECentral center = peripheral.central();
+  if (center) {
     connected = true;
     if (update) {
       update = false;
