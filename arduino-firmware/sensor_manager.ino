@@ -8,4 +8,4 @@ void stop_recording() {
 
 void updateSensors() {
   updateSound();
- }
+}
