@@ -16,13 +16,20 @@ BLEService dataService("470A");
 BLEIntCharacteristic tempChar("180A", BLERead | BLENotify);
 BLEIntCharacteristic lightChar("180B", BLERead | BLENotify);
 BLEIntCharacteristic soundChar("180C", BLERead | BLENotify);
+BLEIntCharacteristic codeChar("180D", BLERead | BLENotify);
 
 //Data Management
 bool connected = false;
 bool update = false;
 int temp = -1;
-int light = -2;
-int sound = -3;
+int light = -1;
+int sound = -1;
+int code = -1;
+
+void setCode(int c) {
+  code = c;
+  update = true;
+}
 
 //Sets the current temp value being broadcast (1-10)
 void setTemp(int t) {
@@ -57,6 +64,7 @@ void tickBLE() {
       tempChar.setValue(temp);
       lightChar.setValue(light);
       soundChar.setValue(sound);
+      codeChar.setValue(code);
     }
   }
 }
