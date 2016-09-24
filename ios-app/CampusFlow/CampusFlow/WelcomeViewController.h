@@ -17,4 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelADesc;
 @property (nonatomic) int stage;
 @property (weak, nonatomic) IBOutlet UITextField *codeTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
