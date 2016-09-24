@@ -9,5 +9,25 @@ float sound_level(int pin) {
 
   int raw = sum >> 6;
   return (1023.0 - raw) / raw_loudest;
+} 
+
+int average;
+
+unsigned long soundTotal;
+int soundIndex;
+int [64] soundArray;
+
+void updateSound () {
+  int newVal = analogRead(pin);
+  updateAverage(newVal);
+  
 }
 
+void updateAverage(int newVal) {
+   soundTotal += newVal;
+  soundTotal -= soundArray[soundIndex];
+  soundArray[soundIndex] = newVal;
+  
+  soundIndex = (soundIndex + 1) & 63;
+  average = soundTotal >> 6;
+ }
