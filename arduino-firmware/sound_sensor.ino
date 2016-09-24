@@ -1,77 +1,56 @@
 
-int milliAvg;
-int milliPeak;
-
-void recordMillisec() {
-  unsigned long sum = 0;
-  int count = 0;
-  milliPeak = 0;
-  unsigned long tStart = micros();
-  unsigned long tEnd = tStart + 1000;
-  while(micros() < tEnd) {
-    int raw = analogRead(SOUND_PIN);
-    sum += raw;
-    count++;
-    milliPeak = max(raw, milliPeak);
-  }
-  milliAvg = sum / count;
-}
-
-int soundAvg;
-int soundPeakAvg;
+const int trackingSeconds = 30;
+const int measuresPerSecPower = 11;
+const int measuresPerSec = 2048;
+short soundArray [2048];
 
 //record average measurement and average peak value per millisecond
+//return number counted
 void recordSoundSecond() {
-  unsigned long sum = 0;
-  unsigned long peakSum = 0;
-  int count = 0;
-  unsigned long tStart = millis();
-  unsigned long tEnd = tStart + 1000;
-  while(millis() < tEnd) {
-    recordMillisec();
-    sum += milliAvg;
-    peakSum += milliPeak;
-    count++;
+  unsigned long tStart = micros();
+  float microsPerMeasure = 1000000.0 / measuresPerSec;
+  for(int i = 0; i < measuresPerSec; i++) {
+    soundArray[i] = analogRead(SOUND_PIN);
+    while(micros() < tStart + microsPerMeasure*i) { }
   }
-  soundAvg = sum / count;
-  soundPeakAvg = peakSum / count;
 }
 
-int getSoundAvg() {return soundAvg;}
-int getSoundPeakAvg() {return soundPeakAvg;}
 
-
-
-
-unsigned long soundTotal;
-int soundIndex;
-int soundArray [32];
-
-void updateSound () {
-  int newVal = analogRead(SOUND_PIN) * analogRead(SOUND_PIN);
-  updateSoundAverage(newVal);
-  updateSoundDeviation(newVal);
+int getSoundAvg() {
+  unsigned long sum = 0;
+  for(int i = 0; i < measuresPerSec; i++) {
+    sum += soundArray[i];
+  }
+  return sum >> measuresPerSecPower;
 }
 
-void updateSoundAverage(int newVal) {
-  soundTotal += newVal;
-  soundTotal -= soundArray[soundIndex];
-  soundArray[soundIndex] = newVal;
-
-  soundIndex = (soundIndex + 1) & 31;
-  soundAverage = soundTotal >> 5;
+int getSoundPeakAvg() {
+  long sum = 0;
+  for(int i = 0; i < measuresPerSec/32; i++) {
+    int peak = 0;
+    for(int j = 0; j < 32; j++) {
+      peak = max(peak, soundArray[32*i+j]);
+    }
+    sum += peak;
+  }
+  return sum >> (measuresPerSecPower-5);
 }
 
-unsigned long soundDevTotal;
-int soundDevIndex;
-int soundDevArray [32];
-
-void updateSoundDeviation(int newVal) {
-  newVal = (newVal - soundAverage) * (newVal - soundAverage);
-  soundDevTotal += newVal;
-  soundDevTotal -= soundDevArray[soundDevIndex];
-  soundDevArray[soundDevIndex] = newVal;
-
-  soundDevIndex = (soundDevIndex + 1) & 31;
-  soundDeviation = sqrt((soundDevTotal >> 5));
+int getSoundAvgSqr() {
+  unsigned long sum = 0;
+  for(int i = 0; i < measuresPerSec; i++) {
+    sum += soundArray[i] * soundArray[i];
+  }
+  return sqrt(sum >> measuresPerSecPower);
 }
+
+int getSoundDeviation(int avg) {
+  unsigned long sum = 0;
+  for(int i = 0; i < measuresPerSec; i++) {
+    int n = (soundArray[i]-avg);
+    sum += n*n;
+  }
+  return sqrt(sum >> measuresPerSecPower);
+}
+
+
