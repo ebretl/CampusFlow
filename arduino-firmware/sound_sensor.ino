@@ -12,15 +12,35 @@ float sound_level(int pin) {
 }
 
 
+void updateSound () {
+  int newVal = analogRead(SOUND_PIN) * analogRead(SOUND_PIN);
+  updateCurrSoundAverage(newVal);
+  if(millis() - millisTimer > 500) {
+  updateSoundAverage(soundCurrAverage);
+  millisTimer = millis();
+  }
+  updateSoundDeviation(soundCurrAverage);
+}
+
+
+unsigned long soundCurrTotal;
+int soundCurrIndex;
+int soundCurrArray [512];
+
+void updateCurrSoundAverage(int newVal) {
+  soundCurrTotal += newVal;
+  soundCurrTotal -= soundCurrArray[soundCurrIndex];
+  soundCurrArray[soundCurrIndex] = newVal;
+
+  soundCurrIndex = (soundCurrIndex + 1) & 511;
+  soundCurrAverage = soundCurrTotal >> 9;
+}
+
+
+
 unsigned long soundTotal;
 int soundIndex;
 int soundArray [512];
-
-void updateSound () {
-  int newVal = analogRead(SOUND_PIN) * analogRead(SOUND_PIN);
-  updateSoundAverage(newVal);
-  updateSoundDeviation(newVal);
-}
 
 void updateSoundAverage(int newVal) {
   soundTotal += newVal;

@@ -11,9 +11,10 @@ const int SOUND_PIN = A0;
 const int LIGHT_PIN = A1;
 const int TEMP_PIN  = A2;
 
-
+unsigned long millisTimer;
 
 int soundAverage;
+int soundCurrAverage;
 int soundDeviation;
 //user preferences currently resets for each session
 float tempIdeal = 72;
@@ -32,6 +33,13 @@ void setup() {
   lcd.begin(16, 2);
   lcd.setRGB(colorR, colorG, colorB);
   lcd.clear();
+  
+  for(int e = 0; e < 1000; e++) {
+    updateSensors(); // fill in initial averages
+    millisTimer = -10000;
+  }
+
+  
   //BLE
   setupBLE();
   beginBLEBroadcast();
@@ -42,18 +50,18 @@ void loop() {
   // (note: line 1 is the second row, since counting begins with 0):
   lcd.setCursor(0, 0);
   updateSensors();
-  // print the number of seconds since reset:
+
   lcd.print("Average: ");
-  lcd.print(soundAverage);
-  
+  lcd.print(soundCurrAverage);
+  lcd.print("       ");
+
   lcd.setCursor(0, 1);
-  lcd.print("Deviation: ");
+  lcd.print(soundAverage);
+  lcd.print("       ");
+  lcd.setCursor(8, 1);  
   lcd.print(soundDeviation);
-  
 
   //BLE
-  tickBLE();
-  
-  delay(10);
+  //tickBLE();
 }
 
