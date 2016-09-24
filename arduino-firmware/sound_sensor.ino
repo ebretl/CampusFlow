@@ -19,6 +19,7 @@ void updateSoundVars() {
   soundAvgSqr = getSoundAvgSqr();
   soundPeakAvg = getSoundPeakAvg();
   soundDeviation = getSoundDeviation(soundAvg);
+  
   rollingSoundAvg = soundRollingAvg(soundAvg);
   rollingSoundAvgSqr = soundRollingAvgSqr(soundAvgSqr);
   rollingSoundPeakAvg = soundRollingPeakAvg(soundPeakAvg);
@@ -91,12 +92,12 @@ int rollingDevs [10];
 float soundRollingDeviation(int newVal) { return updateRollingAvg(rollingDevs,&sumOfDevs,&devIndex,newVal); }
 
 float updateRollingAvg(int arr[], long *total, int *updateIndex, int newVal) {
-  arr[*updateIndex] = newVal;
   *total -= arr[*updateIndex];
   *total += newVal;
+  arr[*updateIndex] = newVal;
 
   int len = sizeof(arr) / sizeof(arr[0]);
-  *updateIndex = (*updateIndex + 1) & (len-1);
+  *updateIndex = (*updateIndex + 1) % len;
   return (float) *total / len;
 }
 
