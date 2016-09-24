@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  TabBarController.h
 //  CampusFlow
 //
 //  Created by Ellie on 9/24/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FlowTabBarController : UITabBarController
 
-- (void)onPairingComplete;
 @end
-

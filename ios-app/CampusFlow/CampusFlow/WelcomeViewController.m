@@ -9,6 +9,7 @@
 #import "WelcomeViewController.h"
 #import <DCAnimationKit/UIView+DCAnimationKit.h>
 #import "BLEManager.h"
+#import "FirstViewController.h"
 
 @interface WelcomeViewController ()
 
@@ -27,6 +28,7 @@ static WelcomeViewController *inst;
     [self.codeTextField setHidden:TRUE];
     self.stage = 1;
     inst = self;
+    [self.imageView setImage:[UIImage imageNamed:@"books.png"]];
 }
 
 - (void)viewDidLoad {
@@ -60,11 +62,13 @@ static WelcomeViewController *inst;
                 [self setTitle:@"Pair your FlowBox"];
                 self.labelATitle.text = @"Please ensure bluetooth is turned on and tap next";
                 [self.labelATitle setHidden:FALSE];
+                [self.imageView setImage:[UIImage imageNamed:@"bluetooth.png"]];
                 break;
             }
             case 2: {
                 if (![[BLEManager instance] isBTEnabled]) {
                     UIAlertController *cont = [UIAlertController alertControllerWithTitle:@"Enable Bluetooth" message:@"Please enable bluetooth" preferredStyle:UIAlertControllerStyleAlert];
+                    [cont addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
                     [self presentViewController:cont animated:TRUE completion:nil];
                     return;
                 }
@@ -78,7 +82,7 @@ static WelcomeViewController *inst;
                 [self.codeTextField setHidden:TRUE];
                 [self.nextButton setEnabled:FALSE];
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    [[BLEManager instance] connectToFlowBoxWithCode:[[self.codeTextField text] intValue]]
+                    [[BLEManager instance] connectToFlowBoxWithCode:[[self.codeTextField text] intValue]];
                     
                 });
                 break;
@@ -89,6 +93,7 @@ static WelcomeViewController *inst;
             }
             case 5: {
                 [[self parentViewController] dismissViewControllerAnimated:TRUE completion:nil];
+                [(FirstViewController*)self.parentViewController onPairingComplete];
             }
                 
         }

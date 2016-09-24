@@ -21,7 +21,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"viewWelcomeNav"] animated:TRUE completion:nil];
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"CampusFlow_welcome"] == nil) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"complete" forKey:@"CampusFlow_welcome"];
+        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"viewWelcomeNav"] animated:TRUE completion:nil];
+    }
+}
+
+- (void)onPairingComplete {
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"viewInfoNav"] animated:TRUE completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
