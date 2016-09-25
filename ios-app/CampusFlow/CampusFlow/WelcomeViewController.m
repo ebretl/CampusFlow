@@ -7,7 +7,6 @@
 //
 
 #import "WelcomeViewController.h"
-#import <DCAnimationKit/UIView+DCAnimationKit.h>
 #import "BLEManager.h"
 #import "DashboardController.h"
 

@@ -2,6 +2,6 @@ platform :ios, '9.3'
 use_frameworks!
 
 target 'CampusFlow' do
-	pod 'DCAnimationKit'
 	pod 'HCSStarRatingView', '~> 1.4.5'
+	pod 'MultiSelectSegmentedControl'
 end

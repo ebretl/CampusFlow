@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E208AACCEB7FB5CEE926673F6D5CAAB3'
-               BlueprintName = 'DCAnimationKit'
+               BlueprintIdentifier = '6C917119E6D5B6E56D4EC81E9DF161ED'
+               BlueprintName = 'MultiSelectSegmentedControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'DCAnimationKit.framework'>
+               BuildableName = 'MultiSelectSegmentedControl.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

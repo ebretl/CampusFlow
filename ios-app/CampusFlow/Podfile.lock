@@ -1,15 +1,15 @@
 PODS:
-  - DCAnimationKit (0.0.6)
   - HCSStarRatingView (1.4.5)
+  - MultiSelectSegmentedControl (1.1.0)
 
 DEPENDENCIES:
-  - DCAnimationKit
   - HCSStarRatingView (~> 1.4.5)
+  - MultiSelectSegmentedControl
 
 SPEC CHECKSUMS:
-  DCAnimationKit: 7133bef877ce1aa113dcfeea1380ca67f91f7608
   HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
+  MultiSelectSegmentedControl: 54fb23c997b971eff621cfcf965ff1613d99c3d2
 
-PODFILE CHECKSUM: 981cc36801d6a3362d960e8505d5278bc7c81f36
+PODFILE CHECKSUM: 3a6c9dc2e4d25de9ff2333a9fcff7e2cdd73dfca
 
 COCOAPODS: 1.0.1

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "HCSStarRatingView.h"
 
-@interface RecordViewController : UIViewController
+@interface RecordViewController : UIViewController <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *toggleSetting;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *toggleLighting;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *toggleTraffic;

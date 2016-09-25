@@ -7,30 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		119E90EAA962BBDFBAC15578C38539AA /* DCAnimationKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4AA0CF43F63C480EAABAEE2509F015F /* DCAnimationKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19316A452242E675A3740E8A16E42160 /* HCSStarRatingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C551C2F4E13313395D4A98A4CCB7DE /* HCSStarRatingView-dummy.m */; };
-		1AD490A1368458C561CE888365903A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		19316A452242E675A3740E8A16E42160 /* HCSStarRatingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A7ADDC19E78FD8AF78198D91A9E114 /* HCSStarRatingView-dummy.m */; };
+		2AA4CA96FB1504A44811C1439AAE316B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		365FD6AAA80A3D977C7C3C7CCA6C8315 /* MultiSelectSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCD16C93ECD25A48F94F733E8AA0412 /* MultiSelectSegmentedControl-dummy.m */; };
+		3AA6616412E8DF46DE1025BE8A389EC1 /* MultiSelectSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 612DB22570CAB3D09E5E0090C429B850 /* MultiSelectSegmentedControl.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		713E5C09F7EA6684C1F79D3F7E261313 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		8A81742C837982A7E983043242C98A88 /* UIView+DCAnimationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 694E6D4162BEECBB86175B441B488511 /* UIView+DCAnimationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94C85DA516296199CA4713DE2449CA83 /* DCAnimationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 619B0D73B748792FE10D814937F13550 /* DCAnimationKit-dummy.m */; };
-		9E242E3D7D2DC8232DA7B907611FE046 /* HCSStarRatingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ED81E2B1094A8B4FA243B83939FFEF4 /* HCSStarRatingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B745B7B6DA13B83B4325D8510EE496F4 /* Pods-CampusFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 970FCA6ED9CA77D2AFD9ECF32847DB24 /* Pods-CampusFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9E4138FB9B25326F1665657F55326EA /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179BC54F47164028B64812126CBD58F1 /* HCSStarRatingView.m */; };
-		DA4F18F7D57841D46F2399C4982D1DE2 /* Pods-CampusFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB665393E05645509CE61D54138B97D3 /* Pods-CampusFlow-dummy.m */; };
-		DFE99505343164C31D36AFB4157004C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		E0836C5294317E4F83795AD73F8D1D37 /* UIView+DCAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AD7DAD5F84B1D6CE826988D7F5A064 /* UIView+DCAnimationKit.m */; };
-		E17EFDCC12F4C81A725F38D2ED15439F /* HCSStarRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95F56C6A0C1C15411BE2A8DD70E920C5 /* HCSStarRatingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80EBF96F60C043EF313B3E743F18A14A /* MultiSelectSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AA790842D068C15F6EA2C5E029F6B51 /* MultiSelectSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E242E3D7D2DC8232DA7B907611FE046 /* HCSStarRatingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42D48535234129F6B2E964402EAC4172 /* HCSStarRatingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB890EA1A55A6469C2BF0011A872354C /* Pods-CampusFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB665393E05645509CE61D54138B97D3 /* Pods-CampusFlow-dummy.m */; };
+		B9E4138FB9B25326F1665657F55326EA /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFE6DB4979486B7F9A5CFADA41776C4 /* HCSStarRatingView.m */; };
+		D28DC0DB1A3FBF36C550AC36C1497D58 /* Pods-CampusFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 970FCA6ED9CA77D2AFD9ECF32847DB24 /* Pods-CampusFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E17EFDCC12F4C81A725F38D2ED15439F /* HCSStarRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFDC37DD626B252D9C0012E5672C90D6 /* HCSStarRatingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4522EA935D46161E3F4DE85D2E5A514 /* MultiSelectSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A1536FB72225A530335ADB0CF8B40E /* MultiSelectSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4EBEDD644B4458B3ED9E01A69F7D331 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D82526034D7F274D54FDF9E29F05BD11 /* PBXContainerItemProxy */ = {
+		16CD923C1B7D5A0AB8E0F60BADCEE6E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E208AACCEB7FB5CEE926673F6D5CAAB3;
-			remoteInfo = DCAnimationKit;
+			remoteGlobalIDString = 6C917119E6D5B6E56D4EC81E9DF161ED;
+			remoteInfo = MultiSelectSegmentedControl;
 		};
-		F526B8F7F9B8BCD698B227BBFBD86B0E /* PBXContainerItemProxy */ = {
+		1F6823C0E59D30845D70B6DE0726947E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -40,53 +40,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0359570C5817851B0C49D57026635B44 /* HCSStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HCSStarRatingView.modulemap; sourceTree = "<group>"; };
-		179BC54F47164028B64812126CBD58F1 /* HCSStarRatingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCSStarRatingView.m; path = HCSStarRatingView/HCSStarRatingView.m; sourceTree = "<group>"; };
+		0013FE5940FF8FD693CD20F5F982FF52 /* HCSStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCSStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20ECF563FB38F3BEC9DFD957AE1FC64A /* Pods-CampusFlow-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CampusFlow-resources.sh"; sourceTree = "<group>"; };
-		2ED81E2B1094A8B4FA243B83939FFEF4 /* HCSStarRatingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCSStarRatingView-umbrella.h"; sourceTree = "<group>"; };
-		37951A357B1D38A81C74D7D3069F8598 /* HCSStarRatingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCSStarRatingView.xcconfig; sourceTree = "<group>"; };
-		428833CAE44B56668BE3760B4DC440E3 /* DCAnimationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DCAnimationKit-prefix.pch"; sourceTree = "<group>"; };
-		43AD7DAD5F84B1D6CE826988D7F5A064 /* UIView+DCAnimationKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCAnimationKit.m"; sourceTree = "<group>"; };
+		2AA790842D068C15F6EA2C5E029F6B51 /* MultiSelectSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MultiSelectSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
+		42D48535234129F6B2E964402EAC4172 /* HCSStarRatingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCSStarRatingView-umbrella.h"; sourceTree = "<group>"; };
 		48293E308A090D212CA152B2366FB58E /* Pods-CampusFlow-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CampusFlow-frameworks.sh"; sourceTree = "<group>"; };
 		4E31A90E94B9EFBF58A663C8ECFD2AF3 /* Pods-CampusFlow-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CampusFlow-acknowledgements.markdown"; sourceTree = "<group>"; };
 		55F037DFF2C910D48AE883ECA6312355 /* Pods-CampusFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CampusFlow.modulemap"; sourceTree = "<group>"; };
-		58053A88C0D1FD477B095D20BFF6BE0E /* DCAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DCAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2E584269E18646BBF5C4BD89661821 /* Pods-CampusFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CampusFlow.debug.xcconfig"; sourceTree = "<group>"; };
-		619B0D73B748792FE10D814937F13550 /* DCAnimationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DCAnimationKit-dummy.m"; sourceTree = "<group>"; };
-		694E6D4162BEECBB86175B441B488511 /* UIView+DCAnimationKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+DCAnimationKit.h"; sourceTree = "<group>"; };
-		78C551C2F4E13313395D4A98A4CCB7DE /* HCSStarRatingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HCSStarRatingView-dummy.m"; sourceTree = "<group>"; };
+		612DB22570CAB3D09E5E0090C429B850 /* MultiSelectSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MultiSelectSegmentedControl.m; sourceTree = "<group>"; };
+		6F44CBEE8D7BC19F649D2558999CD16C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A7ADDC19E78FD8AF78198D91A9E114 /* HCSStarRatingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HCSStarRatingView-dummy.m"; sourceTree = "<group>"; };
+		7420A50C325D82DD5A1C9437FE3E0976 /* MultiSelectSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MultiSelectSegmentedControl.modulemap; sourceTree = "<group>"; };
+		7BCD16C93ECD25A48F94F733E8AA0412 /* MultiSelectSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MultiSelectSegmentedControl-dummy.m"; sourceTree = "<group>"; };
+		8225ECD3D5174B134D939BBE80DF3103 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FA8F7FC61A816A5A215A229A18EBFC /* HCSStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCSStarRatingView-prefix.pch"; sourceTree = "<group>"; };
 		859A1F545545B4B37DE3EC23A04B5561 /* Pods-CampusFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CampusFlow.release.xcconfig"; sourceTree = "<group>"; };
-		898132C4C0883A3D49FD450B74AD36D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A6CE39C548015BE5A31A4442E7B67F /* MultiSelectSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MultiSelectSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		8DF2B79D3B35CA9DCF6936AA273F63B4 /* MultiSelectSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiSelectSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F3A0F26E259CC3295D73B7BCA6C992 /* HCSStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HCSStarRatingView.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95F56C6A0C1C15411BE2A8DD70E920C5 /* HCSStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCSStarRatingView.h; path = HCSStarRatingView/HCSStarRatingView.h; sourceTree = "<group>"; };
 		970FCA6ED9CA77D2AFD9ECF32847DB24 /* Pods-CampusFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CampusFlow-umbrella.h"; sourceTree = "<group>"; };
 		98313B34F7F607AE94AADF6D948813A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4AA0CF43F63C480EAABAEE2509F015F /* DCAnimationKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DCAnimationKit-umbrella.h"; sourceTree = "<group>"; };
-		ACE4ABE312794E52C0D5DF3A7F190835 /* DCAnimationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DCAnimationKit.xcconfig; sourceTree = "<group>"; };
-		B97B6AB06DD94252A776559925860A72 /* HCSStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCSStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE6DA9D0FBAF59BE17737DD304C13D1F /* MultiSelectSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MultiSelectSegmentedControl.xcconfig; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D2C78922C461C4794D3A1C7D62A974CE /* Pods_CampusFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDC37DD626B252D9C0012E5672C90D6 /* HCSStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCSStarRatingView.h; path = HCSStarRatingView/HCSStarRatingView.h; sourceTree = "<group>"; };
+		D2D2AAAECA1A286EFAF6ADFE94BCB47C /* HCSStarRatingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCSStarRatingView.xcconfig; sourceTree = "<group>"; };
+		D3A1536FB72225A530335ADB0CF8B40E /* MultiSelectSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MultiSelectSegmentedControl.h; sourceTree = "<group>"; };
 		DB665393E05645509CE61D54138B97D3 /* Pods-CampusFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CampusFlow-dummy.m"; sourceTree = "<group>"; };
-		E4139399D507CF7E3C009F47F46E6DA2 /* HCSStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCSStarRatingView-prefix.pch"; sourceTree = "<group>"; };
-		ED60494DA0D40544BB61BF4FF238165B /* DCAnimationKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DCAnimationKit.modulemap; sourceTree = "<group>"; };
+		E46F8CA0099B516E022D123D744593F1 /* Pods_CampusFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CC9BD1135A0B1B06B85CDE8A22FBAB /* Pods-CampusFlow-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CampusFlow-acknowledgements.plist"; sourceTree = "<group>"; };
-		F66474F191B1A6300509720B9A88DE49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFE6DB4979486B7F9A5CFADA41776C4 /* HCSStarRatingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCSStarRatingView.m; path = HCSStarRatingView/HCSStarRatingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0D073DC97F012FA3804FD0E388CB0F21 /* Frameworks */ = {
+		0BB6098054F00DA97F1FEA52D1ADAFE5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD490A1368458C561CE888365903A66 /* Foundation.framework in Frameworks */,
+				F4EBEDD644B4458B3ED9E01A69F7D331 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		375C85EF201E1478F94814FE71FD906D /* Frameworks */ = {
+		BA08B568FF9EEAFC0C7EC95139DA74C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE99505343164C31D36AFB4157004C7 /* Foundation.framework in Frameworks */,
+				2AA4CA96FB1504A44811C1439AAE316B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,47 +101,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06E6AC17D540D4045EA57E472D6EB0B8 /* DCAnimationKit */ = {
+		0C794AC14D35DD819B518B88C7E1F231 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				694E6D4162BEECBB86175B441B488511 /* UIView+DCAnimationKit.h */,
-				43AD7DAD5F84B1D6CE826988D7F5A064 /* UIView+DCAnimationKit.m */,
-				2E3D2BAAD0EC6998B28E66670C2B3B1E /* Support Files */,
+				0013FE5940FF8FD693CD20F5F982FF52 /* HCSStarRatingView.framework */,
+				8DF2B79D3B35CA9DCF6936AA273F63B4 /* MultiSelectSegmentedControl.framework */,
+				E46F8CA0099B516E022D123D744593F1 /* Pods_CampusFlow.framework */,
 			);
-			path = DCAnimationKit;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		0D942D76B150B1B2414ED028E489477A /* HCSStarRatingView */ = {
+		2947500C8C913C2251C228AB50E1A0DA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				95F56C6A0C1C15411BE2A8DD70E920C5 /* HCSStarRatingView.h */,
-				179BC54F47164028B64812126CBD58F1 /* HCSStarRatingView.m */,
-				CD1E261C780446CFEFE904A5049EA4DF /* Support Files */,
-			);
-			path = HCSStarRatingView;
-			sourceTree = "<group>";
-		};
-		2E3D2BAAD0EC6998B28E66670C2B3B1E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				ED60494DA0D40544BB61BF4FF238165B /* DCAnimationKit.modulemap */,
-				ACE4ABE312794E52C0D5DF3A7F190835 /* DCAnimationKit.xcconfig */,
-				619B0D73B748792FE10D814937F13550 /* DCAnimationKit-dummy.m */,
-				428833CAE44B56668BE3760B4DC440E3 /* DCAnimationKit-prefix.pch */,
-				A4AA0CF43F63C480EAABAEE2509F015F /* DCAnimationKit-umbrella.h */,
-				F66474F191B1A6300509720B9A88DE49 /* Info.plist */,
+				92F3A0F26E259CC3295D73B7BCA6C992 /* HCSStarRatingView.modulemap */,
+				D2D2AAAECA1A286EFAF6ADFE94BCB47C /* HCSStarRatingView.xcconfig */,
+				72A7ADDC19E78FD8AF78198D91A9E114 /* HCSStarRatingView-dummy.m */,
+				84FA8F7FC61A816A5A215A229A18EBFC /* HCSStarRatingView-prefix.pch */,
+				42D48535234129F6B2E964402EAC4172 /* HCSStarRatingView-umbrella.h */,
+				8225ECD3D5174B134D939BBE80DF3103 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/DCAnimationKit";
-			sourceTree = "<group>";
-		};
-		3DADA1CDB14CCC431F9BC0AB32439470 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				06E6AC17D540D4045EA57E472D6EB0B8 /* DCAnimationKit */,
-				0D942D76B150B1B2414ED028E489477A /* HCSStarRatingView */,
-			);
-			name = Pods;
+			path = "../Target Support Files/HCSStarRatingView";
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -152,25 +133,48 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		4EA37B6C201BB5893010677F8D7C3E3E /* HCSStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				CFDC37DD626B252D9C0012E5672C90D6 /* HCSStarRatingView.h */,
+				FDFE6DB4979486B7F9A5CFADA41776C4 /* HCSStarRatingView.m */,
+				2947500C8C913C2251C228AB50E1A0DA /* Support Files */,
+			);
+			path = HCSStarRatingView;
+			sourceTree = "<group>";
+		};
+		7302DC1FAC96E94F40F786BC427F1B96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EA37B6C201BB5893010677F8D7C3E3E /* HCSStarRatingView */,
+				C1F02F3078E0E677295C71DCEAFE281E /* MultiSelectSegmentedControl */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3DADA1CDB14CCC431F9BC0AB32439470 /* Pods */,
-				7F730158B1BE8BFD76CEFE5A6CFC257F /* Products */,
+				7302DC1FAC96E94F40F786BC427F1B96 /* Pods */,
+				0C794AC14D35DD819B518B88C7E1F231 /* Products */,
 				CA11F839C9787E34492A2302CE109EF6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7F730158B1BE8BFD76CEFE5A6CFC257F /* Products */ = {
+		7EC2993FE4AD6898AECB899A3200EF62 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				58053A88C0D1FD477B095D20BFF6BE0E /* DCAnimationKit.framework */,
-				B97B6AB06DD94252A776559925860A72 /* HCSStarRatingView.framework */,
-				D2C78922C461C4794D3A1C7D62A974CE /* Pods_CampusFlow.framework */,
+				6F44CBEE8D7BC19F649D2558999CD16C /* Info.plist */,
+				7420A50C325D82DD5A1C9437FE3E0976 /* MultiSelectSegmentedControl.modulemap */,
+				AE6DA9D0FBAF59BE17737DD304C13D1F /* MultiSelectSegmentedControl.xcconfig */,
+				7BCD16C93ECD25A48F94F733E8AA0412 /* MultiSelectSegmentedControl-dummy.m */,
+				87A6CE39C548015BE5A31A4442E7B67F /* MultiSelectSegmentedControl-prefix.pch */,
+				2AA790842D068C15F6EA2C5E029F6B51 /* MultiSelectSegmentedControl-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/MultiSelectSegmentedControl";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -181,26 +185,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C1F02F3078E0E677295C71DCEAFE281E /* MultiSelectSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				D3A1536FB72225A530335ADB0CF8B40E /* MultiSelectSegmentedControl.h */,
+				612DB22570CAB3D09E5E0090C429B850 /* MultiSelectSegmentedControl.m */,
+				7EC2993FE4AD6898AECB899A3200EF62 /* Support Files */,
+			);
+			path = MultiSelectSegmentedControl;
+			sourceTree = "<group>";
+		};
 		CA11F839C9787E34492A2302CE109EF6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				F16F6ADFE2834A31529C4CD63BE17898 /* Pods-CampusFlow */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		CD1E261C780446CFEFE904A5049EA4DF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0359570C5817851B0C49D57026635B44 /* HCSStarRatingView.modulemap */,
-				37951A357B1D38A81C74D7D3069F8598 /* HCSStarRatingView.xcconfig */,
-				78C551C2F4E13313395D4A98A4CCB7DE /* HCSStarRatingView-dummy.m */,
-				E4139399D507CF7E3C009F47F46E6DA2 /* HCSStarRatingView-prefix.pch */,
-				2ED81E2B1094A8B4FA243B83939FFEF4 /* HCSStarRatingView-umbrella.h */,
-				898132C4C0883A3D49FD450B74AD36D8 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HCSStarRatingView";
 			sourceTree = "<group>";
 		};
 		F16F6ADFE2834A31529C4CD63BE17898 /* Pods-CampusFlow */ = {
@@ -224,14 +224,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4F59082EEDDB5E8EAC6F3986E18887EB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B745B7B6DA13B83B4325D8510EE496F4 /* Pods-CampusFlow-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3FDFEEAE847FCB0DAB8ED9E1A05C1DB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,35 +233,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA502EAC71B130E607B4A4D9E5AD9967 /* Headers */ = {
+		EFD2C91129D7F23DB873E74DD794EF09 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119E90EAA962BBDFBAC15578C38539AA /* DCAnimationKit-umbrella.h in Headers */,
-				8A81742C837982A7E983043242C98A88 /* UIView+DCAnimationKit.h in Headers */,
+				D28DC0DB1A3FBF36C550AC36C1497D58 /* Pods-CampusFlow-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB83C1EA9A6D851B64718FFD1DFE6BC1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80EBF96F60C043EF313B3E743F18A14A /* MultiSelectSegmentedControl-umbrella.h in Headers */,
+				F4522EA935D46161E3F4DE85D2E5A514 /* MultiSelectSegmentedControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8EA9C95E7BA9C5C5F3C7821FEC7E67BE /* Pods-CampusFlow */ = {
+		6C917119E6D5B6E56D4EC81E9DF161ED /* MultiSelectSegmentedControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8867B2B7338FDF76FD6382FE142EC488 /* Build configuration list for PBXNativeTarget "Pods-CampusFlow" */;
+			buildConfigurationList = E10C3037CFA69FCCAE29806FFDA752F8 /* Build configuration list for PBXNativeTarget "MultiSelectSegmentedControl" */;
 			buildPhases = (
-				AF8CEB3ADBE339B139596FDE28405B6B /* Sources */,
-				0D073DC97F012FA3804FD0E388CB0F21 /* Frameworks */,
-				4F59082EEDDB5E8EAC6F3986E18887EB /* Headers */,
+				C27AFB9521FE68F33C73427E617020B5 /* Sources */,
+				0BB6098054F00DA97F1FEA52D1ADAFE5 /* Frameworks */,
+				FB83C1EA9A6D851B64718FFD1DFE6BC1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FABFB9590C1F82A0C754E133D475EB7F /* PBXTargetDependency */,
-				94E98518DFB194BFB69A6EC874485200 /* PBXTargetDependency */,
+			);
+			name = MultiSelectSegmentedControl;
+			productName = MultiSelectSegmentedControl;
+			productReference = 8DF2B79D3B35CA9DCF6936AA273F63B4 /* MultiSelectSegmentedControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7652C24E408B94D65FAB2CF5E3F040AF /* Pods-CampusFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A472F43E0B5C57576F87615D684894B /* Build configuration list for PBXNativeTarget "Pods-CampusFlow" */;
+			buildPhases = (
+				A15F47388918B73B44E96BD6205F7283 /* Sources */,
+				BA08B568FF9EEAFC0C7EC95139DA74C6 /* Frameworks */,
+				EFD2C91129D7F23DB873E74DD794EF09 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CF1A7BEB93E3955FE3820267EB2760A /* PBXTargetDependency */,
+				97172D1EDC8C39247C76E4E1DED0DE6E /* PBXTargetDependency */,
 			);
 			name = "Pods-CampusFlow";
 			productName = "Pods-CampusFlow";
-			productReference = D2C78922C461C4794D3A1C7D62A974CE /* Pods_CampusFlow.framework */;
+			productReference = E46F8CA0099B516E022D123D744593F1 /* Pods_CampusFlow.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		97E5D28D3DA6F0CA23C263B2B5833B9F /* HCSStarRatingView */ = {
@@ -286,24 +303,7 @@
 			);
 			name = HCSStarRatingView;
 			productName = HCSStarRatingView;
-			productReference = B97B6AB06DD94252A776559925860A72 /* HCSStarRatingView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E208AACCEB7FB5CEE926673F6D5CAAB3 /* DCAnimationKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E9CC13B0F94FF1B639FF297BAF5FC1D0 /* Build configuration list for PBXNativeTarget "DCAnimationKit" */;
-			buildPhases = (
-				3542066FE0FE9BA529E1EDC93F7E247A /* Sources */,
-				375C85EF201E1478F94814FE71FD906D /* Frameworks */,
-				DA502EAC71B130E607B4A4D9E5AD9967 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DCAnimationKit;
-			productName = DCAnimationKit;
-			productReference = 58053A88C0D1FD477B095D20BFF6BE0E /* DCAnimationKit.framework */;
+			productReference = 0013FE5940FF8FD693CD20F5F982FF52 /* HCSStarRatingView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -323,27 +323,18 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7F730158B1BE8BFD76CEFE5A6CFC257F /* Products */;
+			productRefGroup = 0C794AC14D35DD819B518B88C7E1F231 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E208AACCEB7FB5CEE926673F6D5CAAB3 /* DCAnimationKit */,
 				97E5D28D3DA6F0CA23C263B2B5833B9F /* HCSStarRatingView */,
-				8EA9C95E7BA9C5C5F3C7821FEC7E67BE /* Pods-CampusFlow */,
+				6C917119E6D5B6E56D4EC81E9DF161ED /* MultiSelectSegmentedControl */,
+				7652C24E408B94D65FAB2CF5E3F040AF /* Pods-CampusFlow */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3542066FE0FE9BA529E1EDC93F7E247A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94C85DA516296199CA4713DE2449CA83 /* DCAnimationKit-dummy.m in Sources */,
-				E0836C5294317E4F83795AD73F8D1D37 /* UIView+DCAnimationKit.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		69CD793BAA43D79F3997B84E2DD16FA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,65 +344,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF8CEB3ADBE339B139596FDE28405B6B /* Sources */ = {
+		A15F47388918B73B44E96BD6205F7283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4F18F7D57841D46F2399C4982D1DE2 /* Pods-CampusFlow-dummy.m in Sources */,
+				AB890EA1A55A6469C2BF0011A872354C /* Pods-CampusFlow-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C27AFB9521FE68F33C73427E617020B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				365FD6AAA80A3D977C7C3C7CCA6C8315 /* MultiSelectSegmentedControl-dummy.m in Sources */,
+				3AA6616412E8DF46DE1025BE8A389EC1 /* MultiSelectSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		94E98518DFB194BFB69A6EC874485200 /* PBXTargetDependency */ = {
+		2CF1A7BEB93E3955FE3820267EB2760A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HCSStarRatingView;
 			target = 97E5D28D3DA6F0CA23C263B2B5833B9F /* HCSStarRatingView */;
-			targetProxy = F526B8F7F9B8BCD698B227BBFBD86B0E /* PBXContainerItemProxy */;
+			targetProxy = 1F6823C0E59D30845D70B6DE0726947E /* PBXContainerItemProxy */;
 		};
-		FABFB9590C1F82A0C754E133D475EB7F /* PBXTargetDependency */ = {
+		97172D1EDC8C39247C76E4E1DED0DE6E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DCAnimationKit;
-			target = E208AACCEB7FB5CEE926673F6D5CAAB3 /* DCAnimationKit */;
-			targetProxy = D82526034D7F274D54FDF9E29F05BD11 /* PBXContainerItemProxy */;
+			name = MultiSelectSegmentedControl;
+			target = 6C917119E6D5B6E56D4EC81E9DF161ED /* MultiSelectSegmentedControl */;
+			targetProxy = 16CD923C1B7D5A0AB8E0F60BADCEE6E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		29BF72B387B6DF1839CD16FC402618E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E2E584269E18646BBF5C4BD89661821 /* Pods-CampusFlow.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CampusFlow/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CampusFlow/Pods-CampusFlow.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CampusFlow;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -452,7 +419,7 @@
 		};
 		4D3F8FBB0A707A7E395AC208B245D89C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37951A357B1D38A81C74D7D3069F8598 /* HCSStarRatingView.xcconfig */;
+			baseConfigurationReference = D2D2AAAECA1A286EFAF6ADFE94BCB47C /* HCSStarRatingView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -471,68 +438,6 @@
 				MODULEMAP_FILE = "Target Support Files/HCSStarRatingView/HCSStarRatingView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = HCSStarRatingView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		52D34165CCB756F15AC3CA1EB540AB62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACE4ABE312794E52C0D5DF3A7F190835 /* DCAnimationKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DCAnimationKit/DCAnimationKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DCAnimationKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DCAnimationKit/DCAnimationKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DCAnimationKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		56EFCAACA0721E7E1A64FF2D95FF0043 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 859A1F545545B4B37DE3EC23A04B5561 /* Pods-CampusFlow.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CampusFlow/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CampusFlow/Pods-CampusFlow.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CampusFlow;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -583,9 +488,9 @@
 			};
 			name = Debug;
 		};
-		BE5744C1C5D70A22189635373123F899 /* Release */ = {
+		681F2162CCBE071406A11323A001F79F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACE4ABE312794E52C0D5DF3A7F190835 /* DCAnimationKit.xcconfig */;
+			baseConfigurationReference = AE6DA9D0FBAF59BE17737DD304C13D1F /* MultiSelectSegmentedControl.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -596,14 +501,80 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DCAnimationKit/DCAnimationKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DCAnimationKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MultiSelectSegmentedControl/MultiSelectSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MultiSelectSegmentedControl/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DCAnimationKit/DCAnimationKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/MultiSelectSegmentedControl/MultiSelectSegmentedControl.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = DCAnimationKit;
+				PRODUCT_NAME = MultiSelectSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B92ACF2F52A9DC5AE609DA418CDF165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E2E584269E18646BBF5C4BD89661821 /* Pods-CampusFlow.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CampusFlow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CampusFlow/Pods-CampusFlow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CampusFlow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A76AD2442A73B33D709309ADE3023D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 859A1F545545B4B37DE3EC23A04B5561 /* Pods-CampusFlow.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CampusFlow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CampusFlow/Pods-CampusFlow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CampusFlow;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -614,7 +585,7 @@
 		};
 		D6B7773DA5F4DFA0875C847F2F7E9521 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37951A357B1D38A81C74D7D3069F8598 /* HCSStarRatingView.xcconfig */;
+			baseConfigurationReference = D2D2AAAECA1A286EFAF6ADFE94BCB47C /* HCSStarRatingView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -641,23 +612,52 @@
 			};
 			name = Debug;
 		};
+		E9707A182A89A89009232643C63F9C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE6DA9D0FBAF59BE17737DD304C13D1F /* MultiSelectSegmentedControl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MultiSelectSegmentedControl/MultiSelectSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MultiSelectSegmentedControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MultiSelectSegmentedControl/MultiSelectSegmentedControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MultiSelectSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A472F43E0B5C57576F87615D684894B /* Build configuration list for PBXNativeTarget "Pods-CampusFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B92ACF2F52A9DC5AE609DA418CDF165 /* Debug */,
+				A76AD2442A73B33D709309ADE3023D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
 				3FA451D268613890FA8A5A03801E11D5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8867B2B7338FDF76FD6382FE142EC488 /* Build configuration list for PBXNativeTarget "Pods-CampusFlow" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				29BF72B387B6DF1839CD16FC402618E4 /* Debug */,
-				56EFCAACA0721E7E1A64FF2D95FF0043 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -671,11 +671,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9CC13B0F94FF1B639FF297BAF5FC1D0 /* Build configuration list for PBXNativeTarget "DCAnimationKit" */ = {
+		E10C3037CFA69FCCAE29806FFDA752F8 /* Build configuration list for PBXNativeTarget "MultiSelectSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52D34165CCB756F15AC3CA1EB540AB62 /* Debug */,
-				BE5744C1C5D70A22189635373123F899 /* Release */,
+				E9707A182A89A89009232643C63F9C98 /* Debug */,
+				681F2162CCBE071406A11323A001F79F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
