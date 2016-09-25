@@ -1,66 +1,104 @@
 
-int raw_loudest = 500; //lower is more sensitive, <=1023
+short soundArray [3200];
+const int measuresPerSec = sizeof(soundArray) / sizeof(soundArray[0]);
 
-float sound_level(int pin) {
-  long sum = 0;
-  for (int i = 0; i < 64; i++) {
-    sum += analogRead(pin);
+//record average measurement and average peak value per millisecond
+//return number counted
+void recordSoundSecond() {
+  unsigned long tStart = micros();
+  float microsPerMeasure = 1000000.0 / measuresPerSec;
+  for(int i = 0; i < measuresPerSec; i++) {
+    soundArray[i] = analogRead(SOUND_PIN);
+    while(micros() < tStart + microsPerMeasure*i) { }
   }
-
-  int raw = sum >> 6;
-  return (1023.0 - raw) / raw_loudest;
 }
 
-
-void updateSound () {
-  int newVal = analogRead(SOUND_PIN) * analogRead(SOUND_PIN);
-  updateCurrSoundAverage(newVal);
-  if(millis() - millisTimer > 500) {
-  updateSoundAverage(soundCurrAverage);
-  millisTimer = millis();
-  }
-  updateSoundDeviation(soundCurrAverage);
+void updateSoundVars() {
+  soundAvg = getSoundAvg();
+  soundAvgSqr = getSoundAvgSqr();
+  soundPeakAvg = getSoundPeakAvg();
+  soundDeviation = getSoundDeviation(soundAvg);
+  
+  rollingSoundAvg = soundRollingAvg(soundAvg);
+  rollingSoundAvgSqr = soundRollingAvgSqr(soundAvgSqr);
+  rollingSoundPeakAvg = soundRollingPeakAvg(soundPeakAvg);
+  rollingSoundDeviation = soundRollingDeviation(soundDeviation);
 }
 
-
+int getSoundAvg() {
+  unsigned long sum = 0;
+  for(int i = 0; i < measuresPerSec; i++) {
+    sum += soundArray[i];
+  }
+  return sum / measuresPerSec;
+}
 unsigned long soundCurrTotal;
 int soundCurrIndex;
 int soundCurrArray [512];
 
-void updateCurrSoundAverage(int newVal) {
-  soundCurrTotal += newVal;
-  soundCurrTotal -= soundCurrArray[soundCurrIndex];
-  soundCurrArray[soundCurrIndex] = newVal;
+//average of the highest 5 measurements this second
+int getSoundPeakAvg() {
+  long sum = 0;
+  for(int i = 0; i < 5; i++) {
+    int peak = 0;
+    for(int j = 0; j < measuresPerSec/5; j++) {
+      peak = max(peak, soundArray[32*i+j]);
+    }
+    sum += peak;
+  }
+  return sum / 5;
+}
 
-  soundCurrIndex = (soundCurrIndex + 1) & 511;
-  soundCurrAverage = soundCurrTotal >> 9;
+int getSoundAvgSqr() {
+  unsigned long sum = 0;
+  for(int i = 0; i < measuresPerSec; i++) {
+    sum += soundArray[i] * soundArray[i];
+  }
+  return sqrt(sum / measuresPerSec);
+}
+
+int getSoundDeviation(int avg) {
+  unsigned long sum = 0;
+  for(int i = 0; i < measuresPerSec; i++) {
+    int n = (soundArray[i]-avg);
+    sum += n*n;
+  }
+  return sqrt(sum / measuresPerSec);
 }
 
 
 
-unsigned long soundTotal;
-int soundIndex;
-int soundArray [512];
 
-void updateSoundAverage(int newVal) {
-  soundTotal += newVal;
-  soundTotal -= soundArray[soundIndex];
-  soundArray[soundIndex] = newVal;
 
-  soundIndex = (soundIndex + 1) & 511;
-  soundAverage = soundTotal >> 9;
+long sumOfAvgs = 0;
+int avgIndex = 0;
+int rollingAvgs [30];
+float soundRollingAvg(int newVal) { 
+  Serial.println(avgIndex);
+  return updateRollingAvg(rollingAvgs,&sumOfAvgs,&avgIndex,newVal); }
+
+long sumOfAvgsSqr = 0;
+int avgSqrIndex = 0;
+int rollingAvgsSqr [30];
+float soundRollingAvgSqr(int newVal) { return updateRollingAvg(rollingAvgsSqr,&sumOfAvgsSqr,&avgSqrIndex,newVal); }
+
+long sumOfPeakAvgs= 0;
+int peakAvgIndex = 0;
+int rollingPeakAvgs [30];
+float soundRollingPeakAvg(int newVal) { return updateRollingAvg(rollingPeakAvgs,&sumOfPeakAvgs,&peakAvgIndex,newVal); }
+
+long sumOfDevs = 0;
+int devIndex = 0;
+int rollingDevs [30];
+float soundRollingDeviation(int newVal) { return updateRollingAvg(rollingDevs,&sumOfDevs,&devIndex,newVal); }
+
+float updateRollingAvg(int arr[], long *total, int *updateIndex, int newVal) {
+  *total -= arr[*updateIndex];
+  *total += newVal;
+  arr[*updateIndex] = newVal;
+
+  *updateIndex = (*updateIndex + 1) % 30;
+  return (float) *total / 30;
 }
 
-unsigned long soundDevTotal;
-int soundDevIndex;
-int soundDevArray [512];
 
-void updateSoundDeviation(int newVal) {
-  newVal = (newVal - soundAverage) * (newVal - soundAverage);
-  soundDevTotal += newVal;
-  soundDevTotal -= soundDevArray[soundDevIndex];
-  soundDevArray[soundDevIndex] = newVal;
-
-  soundDevIndex = (soundDevIndex + 1) & 511;
-  soundDeviation = sqrt((soundDevTotal >> 9));
-}

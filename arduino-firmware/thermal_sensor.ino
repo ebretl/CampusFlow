@@ -9,8 +9,6 @@ void updateTemperature () {
   updateTempAverage(newVal);
 }
 
-
-
 int B=4275;
 
 float getRawTemperature(int pinTempSensor) {

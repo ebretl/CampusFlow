@@ -7,5 +7,6 @@ void stop_recording() {
 }
 
 void updateSensors() {
-  updateSound();
- }
+  recordSoundSecond();
+  updateSoundVars();
+}
