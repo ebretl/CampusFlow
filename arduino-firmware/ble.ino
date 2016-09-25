@@ -13,18 +13,17 @@
 //BLE Management
 BLEPeripheral peripheral;
 BLEService dataService("470A");
-BLEIntCharacteristic tempChar("180A", BLERead | BLENotify);
-BLEIntCharacteristic lightChar("180B", BLERead | BLENotify);
-BLEIntCharacteristic soundChar("180C", BLERead | BLENotify);
-BLEIntCharacteristic codeChar("180D", BLERead | BLENotify);
+BLEIntCharacteristic tempChar("924A", BLERead | BLENotify);
+BLEIntCharacteristic deviationChar("924B", BLERead | BLENotify);
+BLEIntCharacteristic soundChar("924C", BLERead | BLENotify);
+BLEIntCharacteristic codeChar("924D", BLERead | BLENotify);
 
 //Data Management
 bool connected = false;
 bool update = false;
 int temp = -1;
-int light = -1;
+int deviation = -1;
 int sound = -1;
-int code = -1;
 
 void setCode(int c) {
   code = c;
@@ -37,9 +36,9 @@ void setTemp(int t) {
   update = true;
 }
 
-//Sets the current light value being broadcast (1-10)
-void setLight(int l) {
-  light = l;
+//Sets the current deviation value being broadcast (1-10)
+void setDeviation(int l) {
+  deviation = l;
   update = true;
 }
 
@@ -62,7 +61,7 @@ void tickBLE() {
     if (update) {
       update = false;
       tempChar.setValue(temp);
-      lightChar.setValue(light);
+      deviationChar.setValue(deviation);
       soundChar.setValue(sound);
       codeChar.setValue(code);
     }
@@ -75,15 +74,28 @@ void setupBLE() {
   peripheral.setAdvertisedServiceUuid(dataService.uuid());
   peripheral.addAttribute(dataService);
   peripheral.addAttribute(tempChar);
-  peripheral.addAttribute(lightChar);
+  peripheral.addAttribute(deviationChar);
   peripheral.addAttribute(soundChar);
+  peripheral.addAttribute(codeChar);
   tempChar.setValue(-1);
-  lightChar.setValue(-1);
+  deviationChar.setValue(-1);
   soundChar.setValue(-1);
+
 }
 
 //Begins broadcasting BLE signals
 void beginBLEBroadcast() {
   peripheral.begin();
+  
+  code += random(1, 10);
+  code *= 10;
+  code += random(0, 10);
+  code *= 10;
+  code += random(0, 10);
+  code *= 10;
+  code += random(1, 10);
+  
+  codeChar.setValue(code);
+
 }
 

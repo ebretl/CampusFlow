@@ -1,16 +1,19 @@
 
-short soundArray [3200];
+short soundArray [2500];
 const int measuresPerSec = sizeof(soundArray) / sizeof(soundArray[0]);
 
 //record average measurement and average peak value per millisecond
 //return number counted
 void recordSoundSecond() {
-  unsigned long tStart = micros();
-  float microsPerMeasure = 1000000.0 / measuresPerSec;
+  //unsigned long tStart = micros();
+  unsigned long timer = millis();
+  //float microsPerMeasure = 1000000.0 / measuresPerSec;
   for(int i = 0; i < measuresPerSec; i++) {
     soundArray[i] = analogRead(SOUND_PIN);
-    while(micros() < tStart + microsPerMeasure*i) { }
+   // while(micros() < tStart + microsPerMeasure*i) { }
   }
+  Serial.println((millis()-timer));
+  delay(1000- (millis() - timer));
 }
 
 void updateSoundVars() {
@@ -32,9 +35,6 @@ int getSoundAvg() {
   }
   return sum / measuresPerSec;
 }
-unsigned long soundCurrTotal;
-int soundCurrIndex;
-int soundCurrArray [512];
 
 //average of the highest 5 measurements this second
 int getSoundPeakAvg() {
