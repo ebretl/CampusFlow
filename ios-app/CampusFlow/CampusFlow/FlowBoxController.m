@@ -10,12 +10,22 @@
 
 @implementation FlowBoxController
 
-@synthesize service, peripheral, tempChar, soundChar, codeChar;
+@synthesize service, peripheral, tempChar, soundChar, codeChar, devChar;
+
+static FlowBoxController* flowBox;
+
++ (FlowBoxController*) instance {
+    return flowBox;
+}
+
++ (void) setFlowBox:(FlowBoxController*)fb {
+    flowBox = fb;
+}
 
 - (id)initWithPeripheral:(CBPeripheral *)peripheral {
     self = [super init];
     if (self) {
-        
+        self.peripheral = peripheral;
     }
     return self;
 }

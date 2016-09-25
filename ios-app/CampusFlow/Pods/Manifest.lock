@@ -1,12 +1,15 @@
 PODS:
   - DCAnimationKit (0.0.6)
+  - HCSStarRatingView (1.4.5)
 
 DEPENDENCIES:
   - DCAnimationKit
+  - HCSStarRatingView (~> 1.4.5)
 
 SPEC CHECKSUMS:
   DCAnimationKit: 7133bef877ce1aa113dcfeea1380ca67f91f7608
+  HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
 
-PODFILE CHECKSUM: 9a8ed191576ae856b796aef1685be474f979f5b5
+PODFILE CHECKSUM: 981cc36801d6a3362d960e8505d5278bc7c81f36
 
 COCOAPODS: 1.0.1

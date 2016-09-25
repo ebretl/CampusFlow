@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HCSStarRatingView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CampusFlow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D8F820632632D908C93D7AB3A132F3DF</key>
+		<key>8EA9C95E7BA9C5C5F3C7821FEC7E67BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97E5D28D3DA6F0CA23C263B2B5833B9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

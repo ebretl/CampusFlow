@@ -9,7 +9,7 @@
 #import "WelcomeViewController.h"
 #import <DCAnimationKit/UIView+DCAnimationKit.h>
 #import "BLEManager.h"
-#import "FirstViewController.h"
+#import "DashboardController.h"
 
 @interface WelcomeViewController ()
 
@@ -34,6 +34,10 @@ static WelcomeViewController *inst;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"records.dat"] isDirectory:FALSE]) {
+        [[NSFileManager defaultManager] createFileAtPath:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"records.dat"] contents:nil attributes:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +50,7 @@ static WelcomeViewController *inst;
         self.stage -= 2;
         [self onNextButtonPressed:nil];
         UIAlertController *cont = [UIAlertController alertControllerWithTitle:@"Invalid Code" message:@"We couldn't find your FlowBox, please try again" preferredStyle:UIAlertControllerStyleAlert];
+        [cont addAction:[UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:cont animated:TRUE completion:nil];
         [self.nextButton setEnabled:TRUE];
     } else {
@@ -66,6 +71,7 @@ static WelcomeViewController *inst;
                 break;
             }
             case 2: {
+                [[BLEManager instance] isBTEnabled];
                 if (![[BLEManager instance] isBTEnabled]) {
                     UIAlertController *cont = [UIAlertController alertControllerWithTitle:@"Enable Bluetooth" message:@"Please enable bluetooth" preferredStyle:UIAlertControllerStyleAlert];
                     [cont addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
@@ -85,15 +91,16 @@ static WelcomeViewController *inst;
                     [[BLEManager instance] connectToFlowBoxWithCode:[[self.codeTextField text] intValue]];
                     
                 });
+                [self.view endEditing:TRUE];
                 break;
             }
             case 4: {
                 [self.labelATitle setText:@"Connected! You're almost ready to use your FlowBox!"];
+                [self.nextButton setEnabled:TRUE];
                 break;
             }
             case 5: {
-                [[self parentViewController] dismissViewControllerAnimated:TRUE completion:nil];
-                [(FirstViewController*)self.parentViewController onPairingComplete];
+                [[DashboardController instance] onPairingComplete];
             }
                 
         }

@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'CampusFlow' do
 	pod 'DCAnimationKit'
+	pod 'HCSStarRatingView', '~> 1.4.5'
 end

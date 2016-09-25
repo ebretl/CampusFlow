@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BasicInfoViewController : UIViewController
+@interface BasicInfoViewController : UIViewController <UITextFieldDelegate>
 - (IBAction)onSave:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *collegeField;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;

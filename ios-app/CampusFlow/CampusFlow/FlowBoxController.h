@@ -15,5 +15,8 @@
 @property (strong, nonatomic) CBCharacteristic *tempChar;
 @property (strong, nonatomic) CBCharacteristic *soundChar;
 @property (strong, nonatomic) CBCharacteristic *codeChar;
+@property (strong, nonatomic) CBCharacteristic *devChar;
 - (id)initWithPeripheral:(CBPeripheral*)peripheral;
++ (FlowBoxController*)instance;
++ (void)setFlowBox:(FlowBoxController*)fb;
 @end

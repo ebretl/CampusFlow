@@ -9,10 +9,19 @@
 /* Begin PBXBuildFile section */
 		0D472B7E1D96D846008B0ABA /* BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D472B7D1D96D846008B0ABA /* BLEManager.m */; };
 		0D472B831D96DAE9008B0ABA /* FlowBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D472B821D96DAE9008B0ABA /* FlowBoxController.m */; };
+		0D8E96FB1D96F7B80048D44A /* books.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E96FA1D96F7B80048D44A /* books.png */; };
+		0D8E96FD1D96F80C0048D44A /* bluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E96FC1D96F80C0048D44A /* bluetooth.png */; };
+		0D8E97051D9707AE0048D44A /* pencil3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E97041D9707AE0048D44A /* pencil3.png */; };
+		0D8E97071D9708C70048D44A /* dash2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E97061D9708C70048D44A /* dash2.png */; };
+		0D8E970B1D97093F0048D44A /* FlowTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E970A1D97093F0048D44A /* FlowTabBarController.m */; };
+		0D8E970E1D9730120048D44A /* BasicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E970D1D9730120048D44A /* BasicInfoViewController.m */; };
+		0D9555A51D97479800747706 /* PBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9555A31D97479800747706 /* PBView.m */; };
+		0D9555A81D97888A00747706 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9555A71D97888A00747706 /* RecordViewController.m */; };
+		0D9555AB1D97B5EF00747706 /* RecordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9555AA1D97B5EF00747706 /* RecordObject.m */; };
 		0DA5E9D51D96C73D00729692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9D41D96C73D00729692 /* main.m */; };
 		0DA5E9D81D96C73D00729692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9D71D96C73D00729692 /* AppDelegate.m */; };
-		0DA5E9DB1D96C73D00729692 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DA1D96C73D00729692 /* FirstViewController.m */; };
-		0DA5E9DE1D96C73D00729692 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DD1D96C73D00729692 /* SecondViewController.m */; };
+		0DA5E9DB1D96C73D00729692 /* DashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DA1D96C73D00729692 /* DashboardController.m */; };
+		0DA5E9DE1D96C73D00729692 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DD1D96C73D00729692 /* HistoryViewController.m */; };
 		0DA5E9E11D96C73D00729692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5E9DF1D96C73D00729692 /* Main.storyboard */; };
 		0DA5E9E31D96C73D00729692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5E9E21D96C73D00729692 /* Assets.xcassets */; };
 		0DA5E9E61D96C73D00729692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5E9E41D96C73D00729692 /* LaunchScreen.storyboard */; };
@@ -47,14 +56,28 @@
 		0D472B811D96DAE9008B0ABA /* FlowBoxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowBoxController.h; sourceTree = "<group>"; };
 		0D472B821D96DAE9008B0ABA /* FlowBoxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowBoxController.m; sourceTree = "<group>"; };
 		0D472B841D96E82C008B0ABA /* BTStateListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTStateListener.h; sourceTree = "<group>"; };
+		0D8E96FA1D96F7B80048D44A /* books.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = books.png; sourceTree = "<group>"; };
+		0D8E96FC1D96F80C0048D44A /* bluetooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluetooth.png; sourceTree = "<group>"; };
+		0D8E97041D9707AE0048D44A /* pencil3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil3.png; sourceTree = "<group>"; };
+		0D8E97061D9708C70048D44A /* dash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash2.png; sourceTree = "<group>"; };
+		0D8E97091D97093F0048D44A /* FlowTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowTabBarController.h; sourceTree = "<group>"; };
+		0D8E970A1D97093F0048D44A /* FlowTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowTabBarController.m; sourceTree = "<group>"; };
+		0D8E970C1D9730120048D44A /* BasicInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfoViewController.h; sourceTree = "<group>"; };
+		0D8E970D1D9730120048D44A /* BasicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInfoViewController.m; sourceTree = "<group>"; };
+		0D9555A21D97479800747706 /* PBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBView.h; sourceTree = "<group>"; };
+		0D9555A31D97479800747706 /* PBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBView.m; sourceTree = "<group>"; };
+		0D9555A61D97888A00747706 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		0D9555A71D97888A00747706 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		0D9555A91D97B5EF00747706 /* RecordObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordObject.h; sourceTree = "<group>"; };
+		0D9555AA1D97B5EF00747706 /* RecordObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordObject.m; sourceTree = "<group>"; };
 		0DA5E9D01D96C73D00729692 /* CampusFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA5E9D41D96C73D00729692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DA5E9D61D96C73D00729692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DA5E9D71D96C73D00729692 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0DA5E9D91D96C73D00729692 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		0DA5E9DA1D96C73D00729692 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0DA5E9DC1D96C73D00729692 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		0DA5E9DD1D96C73D00729692 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		0DA5E9D91D96C73D00729692 /* DashboardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardController.h; sourceTree = "<group>"; };
+		0DA5E9DA1D96C73D00729692 /* DashboardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashboardController.m; sourceTree = "<group>"; };
+		0DA5E9DC1D96C73D00729692 /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		0DA5E9DD1D96C73D00729692 /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		0DA5E9E01D96C73D00729692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DA5E9E21D96C73D00729692 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA5E9E51D96C73D00729692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +122,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D8E97081D9709070048D44A /* img */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E97061D9708C70048D44A /* dash2.png */,
+				0D8E97041D9707AE0048D44A /* pencil3.png */,
+				0D8E96FC1D96F80C0048D44A /* bluetooth.png */,
+				0D8E96FA1D96F7B80048D44A /* books.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
 		0DA5E9C71D96C73D00729692 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +159,8 @@
 		0DA5E9D21D96C73D00729692 /* CampusFlow */ = {
 			isa = PBXGroup;
 			children = (
+				0D9555A21D97479800747706 /* PBView.h */,
+				0D9555A31D97479800747706 /* PBView.m */,
 				0DA5EA0B1D96CAD300729692 /* UI */,
 				0DA5E9D61D96C73D00729692 /* AppDelegate.h */,
 				0DA5E9D71D96C73D00729692 /* AppDelegate.m */,
@@ -138,6 +174,8 @@
 				0D472B811D96DAE9008B0ABA /* FlowBoxController.h */,
 				0D472B821D96DAE9008B0ABA /* FlowBoxController.m */,
 				0D472B841D96E82C008B0ABA /* BTStateListener.h */,
+				0D9555A91D97B5EF00747706 /* RecordObject.h */,
+				0D9555AA1D97B5EF00747706 /* RecordObject.m */,
 			);
 			path = CampusFlow;
 			sourceTree = "<group>";
@@ -171,12 +209,19 @@
 		0DA5EA0B1D96CAD300729692 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0DA5E9D91D96C73D00729692 /* FirstViewController.h */,
-				0DA5E9DA1D96C73D00729692 /* FirstViewController.m */,
-				0DA5E9DC1D96C73D00729692 /* SecondViewController.h */,
-				0DA5E9DD1D96C73D00729692 /* SecondViewController.m */,
+				0D8E97081D9709070048D44A /* img */,
+				0DA5E9D91D96C73D00729692 /* DashboardController.h */,
+				0DA5E9DA1D96C73D00729692 /* DashboardController.m */,
+				0DA5E9DC1D96C73D00729692 /* HistoryViewController.h */,
+				0DA5E9DD1D96C73D00729692 /* HistoryViewController.m */,
 				0DA5EA0C1D96CB7000729692 /* WelcomeViewController.h */,
 				0DA5EA0D1D96CB7000729692 /* WelcomeViewController.m */,
+				0D8E97091D97093F0048D44A /* FlowTabBarController.h */,
+				0D8E970A1D97093F0048D44A /* FlowTabBarController.m */,
+				0D8E970C1D9730120048D44A /* BasicInfoViewController.h */,
+				0D8E970D1D9730120048D44A /* BasicInfoViewController.m */,
+				0D9555A61D97888A00747706 /* RecordViewController.h */,
+				0D9555A71D97888A00747706 /* RecordViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -268,6 +313,7 @@
 				TargetAttributes = {
 					0DA5E9CF1D96C73D00729692 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FZA6Q866PY;
 					};
 					0DA5E9EB1D96C73D00729692 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -305,7 +351,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA5E9E61D96C73D00729692 /* LaunchScreen.storyboard in Resources */,
+				0D8E97071D9708C70048D44A /* dash2.png in Resources */,
 				0DA5E9E31D96C73D00729692 /* Assets.xcassets in Resources */,
+				0D8E97051D9707AE0048D44A /* pencil3.png in Resources */,
+				0D8E96FD1D96F80C0048D44A /* bluetooth.png in Resources */,
+				0D8E96FB1D96F7B80048D44A /* books.png in Resources */,
 				0DA5E9E11D96C73D00729692 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,11 +430,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA5EA0E1D96CB7000729692 /* WelcomeViewController.m in Sources */,
-				0DA5E9DE1D96C73D00729692 /* SecondViewController.m in Sources */,
+				0DA5E9DE1D96C73D00729692 /* HistoryViewController.m in Sources */,
 				0DA5E9D81D96C73D00729692 /* AppDelegate.m in Sources */,
 				0D472B831D96DAE9008B0ABA /* FlowBoxController.m in Sources */,
-				0DA5E9DB1D96C73D00729692 /* FirstViewController.m in Sources */,
+				0D8E970E1D9730120048D44A /* BasicInfoViewController.m in Sources */,
+				0DA5E9DB1D96C73D00729692 /* DashboardController.m in Sources */,
+				0D8E970B1D97093F0048D44A /* FlowTabBarController.m in Sources */,
+				0D9555AB1D97B5EF00747706 /* RecordObject.m in Sources */,
+				0D9555A81D97888A00747706 /* RecordViewController.m in Sources */,
 				0DA5E9D51D96C73D00729692 /* main.m in Sources */,
+				0D9555A51D97479800747706 /* PBView.m in Sources */,
 				0D472B7E1D96D846008B0ABA /* BLEManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +582,7 @@
 			baseConfigurationReference = 0160B3BB5FC1890E49C83479 /* Pods-CampusFlow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZA6Q866PY;
 				INFOPLIST_FILE = CampusFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlow;
@@ -539,6 +595,7 @@
 			baseConfigurationReference = E454FFF7D7EB0FAB31D49CCF /* Pods-CampusFlow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZA6Q866PY;
 				INFOPLIST_FILE = CampusFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CampusFlow;

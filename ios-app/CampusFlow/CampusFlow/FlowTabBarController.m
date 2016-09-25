@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setSelectedViewController:[self viewControllers][1]];
+    //[self setSelectedViewController:[self viewControllers][1]];
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "BLEManager.h"
 #import "FlowBoxController.h"
 #import "WelcomeViewController.h"
+#import "DashboardController.h"
 
 @implementation BLEManager
 
@@ -17,6 +18,7 @@ static BLEManager *statInstance;
 + (BLEManager*) instance {
     if (!statInstance)
         statInstance = [[BLEManager alloc] init];
+    [statInstance isBTEnabled];
     return statInstance;
 }
 
@@ -39,6 +41,7 @@ BOOL isSending = false;
 }
 
 - (void)startScanningForDevices {
+    NSLog(@"Beginning to scan for bluetooth devices");
     [central scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:@"470A"]] options:nil];
 }
 
@@ -51,7 +54,11 @@ BOOL isSending = false;
 }
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
-    
+    NSLog(@"CBCentralManager state update");
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"CampusFlow_BLE_code"] != nil) {
+        [[DashboardController instance] flowboxStatus].text = @"FlowBox Status: Connecting...";
+        [[BLEManager instance] connectToFlowBoxWithCode:(int)[[NSUserDefaults standardUserDefaults] integerForKey:@"CampusFlow_BLE_code"]];
+    }
 }
 
 - (void)centralManager:(CBCentralManager *)ctrl didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
@@ -68,10 +75,11 @@ BOOL isSending = false;
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    NSLog(@"Discovered FlowBox services");
     FlowBoxController *bc = [[FlowBoxController alloc] initWithPeripheral:discoveredPeripheral];
     [bc setService:[self getServiceWithUUID:@"470A" fromPeripheral:discoveredPeripheral]];
     [self.devices addObject:bc];
-    [discoveredPeripheral discoverCharacteristics:@[[CBUUID UUIDWithString:@"180A"], [CBUUID UUIDWithString:@"180C"], [CBUUID UUIDWithString:@"180D"]] forService:[bc service]];
+    [discoveredPeripheral discoverCharacteristics:nil forService:[bc service]];
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
@@ -81,28 +89,57 @@ BOOL isSending = false;
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     FlowBoxController *controller = [self getFlowBoxControllerForPeripheral:peripheral];
     for (CBCharacteristic *charac in [service characteristics]) {
-        if ([[[charac UUID] UUIDString] isEqualToString:@"180A"]) {
+        NSLog(@"Characteristic: %@", [charac UUID]);
+        if ([[[charac UUID] UUIDString] isEqual:@"924A"]) {
             [controller setTempChar:charac];
-        } else if ([[[charac UUID] UUIDString] isEqualToString:@"180C"]) {
+        } else if ([[[charac UUID] UUIDString] isEqual:@"924B"]) {
+            [controller setDevChar:charac];
+        } else if ([[[charac UUID] UUIDString] isEqual:@"924C"]) {
             [controller setSoundChar:charac];
-        } else if ([[[charac UUID] UUIDString] isEqualToString:@"180D"]) {
+        } else if ([[[charac UUID] UUIDString] isEqual:@"924D"]) {
+            NSLog(@"Found code char");
             [controller setCodeChar:charac];
         }
+        [peripheral setNotifyValue:TRUE forCharacteristic:charac];
+        [controller.peripheral readValueForCharacteristic:charac];
     }
-    
-    //FINISHED CONNECTING
-    if ((int)[[controller codeChar] value] == self.code) {
-        NSLog(@"Codes match!");
-        [[WelcomeViewController instance] onConnectResult:true];
-    } else {
-        NSLog(@"Codes don't match!");
-        [[WelcomeViewController instance] onConnectResult:true];
-    }
+    NSLog(@"Waiting for character read...");
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    NSData *data4 = [[characteristic value] subdataWithRange:NSMakeRange(0, 4)];
+    int value = CFSwapInt32LittleToHost(*(int*)([data4 bytes]));
+    //NSLog(@"%@: %i", [characteristic UUID], value);
+    if ([[[characteristic UUID] UUIDString] isEqual:@"924D"] && value != 0) {
+        [peripheral setNotifyValue:FALSE forCharacteristic:characteristic];
+        FlowBoxController *controller = [self getFlowBoxControllerForPeripheral:peripheral];
+        NSLog(@"Finished connecting");
+        //FINISHED CONNECTING
+        if (value == self.code) {
+            NSLog(@"Codes match!");
+            [[NSUserDefaults standardUserDefaults] setInteger:self.code forKey:@"CampusFlow_BLE_code"];
+            [FlowBoxController setFlowBox:controller];
+            [[WelcomeViewController instance] onConnectResult:true];
+            [[DashboardController instance] onConnectResult:true];
+        } else {
+            NSLog(@"Codes don't match!");
+            NSLog(@"Code: %i, Expected: %i", value, self.code);
+            [[WelcomeViewController instance] onConnectResult:false];
+            [[DashboardController instance] onConnectResult:true];
+            [self.central cancelPeripheralConnection:controller.peripheral];
+        }
+    } else {
+        [[DashboardController instance] changeDataWithTemp:[self getVal:[[FlowBoxController instance] tempChar]] withDeviation:[self getVal:[[FlowBoxController instance] devChar]] withSound:[self getVal:[[FlowBoxController instance] soundChar]]];
+    }
+}
+
+- (int)getVal:(CBCharacteristic*) charac {
+    if ([charac value] == nil) {
+        return 0;
+    }
     
-    
+    NSData *data4 = [[charac value] subdataWithRange:NSMakeRange(0, 4)];
+    return CFSwapInt32LittleToHost(*(int*)([data4 bytes]));
 }
 
 - (void)connectToFlowBoxWithCode:(int)code {
@@ -116,6 +153,12 @@ BOOL isSending = false;
             return b;
     }
     return nil;
+}
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    NSLog(@"Peripheral disconnected");
+    [FlowBoxController setFlowBox:nil];
+    [[DashboardController instance] flowboxStatus].text = @"FlowBox Status: Disconnected";
 }
 
 - (CBService*)getServiceWithUUID:(NSString*)uuid fromPeripheral:(CBPeripheral*)peripheral {
